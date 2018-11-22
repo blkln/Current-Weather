@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ISO8601DateFormatterValueTransformer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-Current Weather.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>RKValueTransformers.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>RestKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>SOCKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>TransitionKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>200A956E2470FA6EE8CBF1820F268B42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5654A60EE75311E5F31DA299E42C7F56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7A58B1F88688492899C7A35CCC77233</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D7BE307273D92E9986922EA991D9A2B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E22A8C08905B0501525C7572D68A8E70</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F791BDB287DC7F63D00EF38F99F702C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
