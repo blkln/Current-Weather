@@ -10,103 +10,107 @@
 
 @implementation Weather
 
-//-(instancetype) init//:(NSUInteger)count usingDeck:(Deck *)deck
-//{
-//    self = [super init]; //superclass' designated initializer
-//    if (self) {
-//        NSLog(@"%@",self.weatherState);
-//        NSLog(@"%@",self.weatherDescription);
-//        NSLog(@"%@",self.temperature);
-//        NSLog(@"%@",self.pressure);
-//        NSLog(@"%@",self.humidity);
-//        NSLog(@"%@",self.windSpeed);
-//        NSLog(@"%@",self.windDirection);
-//    }
-//    return self;
-//}
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    //Encode properties, other class variables, etc
+    [encoder encodeObject:self.name forKey:@"name"];
+    [encoder encodeObject:self.weather forKey:@"weather"];
+    [encoder encodeObject:self.main forKey:@"main"];
+    [encoder encodeObject:self.wind forKey:@"wind"];
+    [encoder encodeObject:self.weatherState forKey:@"weatherState"];
+    [encoder encodeObject:self.weatherDescription forKey:@"weatherDescription"];
+    [encoder encodeObject:self.temperature forKey:@"temperature"];
+    [encoder encodeObject:self.pressure forKey:@"pressure"];
+    [encoder encodeObject:self.humidity forKey:@"humidity"];
+    [encoder encodeObject:self.windSpeed forKey:@"windSpeed"];
+    [encoder encodeObject:self.windDirection forKey:@"windDirection"];
 
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if((self = [super init])) {
+        //decode properties, other class vars
+        self.name = [decoder decodeObjectForKey:@"name"];
+        self.weather = [decoder decodeObjectForKey:@"weather"];
+        self.main = [decoder decodeObjectForKey:@"main"];
+        self.wind = [decoder decodeObjectForKey:@"wind"];
+        self.weatherState = [decoder decodeObjectForKey:@"weatherState"];
+        self.weatherDescription = [decoder decodeObjectForKey:@"weatherDescription"];
+        self.temperature = [decoder decodeObjectForKey:@"temperature"];
+        self.pressure = [decoder decodeObjectForKey:@"pressure"];
+        self.humidity = [decoder decodeObjectForKey:@"humidity"];
+        self.windSpeed = [decoder decodeObjectForKey:@"windSpeed"];
+        self.windDirection = [decoder decodeObjectForKey:@"windDirection"];
+    }
+    return self;
+}
 
 -(NSString *)name
 {
     if (!_name) {
         _name = [self.name capitalizedString];
     }
-//    _name = [self.name capitalizedString];
     return  _name;
 }
 
 -(NSString *)weatherState
 {
-//    if (!_weatherState) {
-//        NSDictionary *weatherItem = self.weather.firstObject;
-//        _weatherState = [weatherItem[@"main"] capitalizedString];
-//    }
-    NSDictionary *weatherItem = self.weather.firstObject;
-    _weatherState = [weatherItem[@"main"] capitalizedString];
+    if (!_weatherState) {
+        NSDictionary *weatherItem = self.weather.firstObject;
+        _weatherState = [weatherItem[@"main"] capitalizedString];
+    }
     return _weatherState;
 }
 
 -(NSString *)weatherDescription
 {
-//    if (!_weatherDescription) {
-//        NSDictionary *weatherItem = self.weather.firstObject;
-//        _weatherDescription = [weatherItem[@"description"] capitalizedString];
-//    }
-    NSDictionary *weatherItem = self.weather.firstObject;
-    _weatherDescription = [weatherItem[@"description"] capitalizedString];
+    if (!_weatherDescription) {
+        NSDictionary *weatherItem = self.weather.firstObject;
+        _weatherDescription = [weatherItem[@"description"] capitalizedString];
+    }
     return _weatherDescription;
 }
 
 -(NSString *)temperature
 {
-//    if (!_temperature) {
-//        NSNumber *temp = self.main[@"temp"];
-//        _temperature = [NSString stringWithFormat:@"%d ℃", (int) ceil(temp.doubleValue)];
-//    }
-    NSNumber *temp = self.main[@"temp"];
-    _temperature = [NSString stringWithFormat:@"%d ℃", (int) ceil(temp.doubleValue)];
+    if (!_temperature) {
+        NSNumber *temp = self.main[@"temp"];
+        _temperature = [NSString stringWithFormat:@"%d ℃", (int) ceil(temp.doubleValue)];
+    }
     return _temperature;
 }
 
 -(NSString *)pressure
 {
-//    if (!_pressure) {
-//        _pressure = [NSString stringWithFormat:@"%@ hPa", self.main[@"pressure"]];
-//    }
-    _pressure = [NSString stringWithFormat:@"%@ hPa", self.main[@"pressure"]];
+    if (!_pressure) {
+        _pressure = [NSString stringWithFormat:@"%@ hPa", self.main[@"pressure"]];
+    }
     return _pressure;
 }
 
 -(NSString *)humidity
 {
-//    if (!_humidity) {
-//        _humidity = [NSString stringWithFormat:@"%@ %%", self.main[@"humidity"]];
-//    }
-    _humidity = [NSString stringWithFormat:@"%@ %%", self.main[@"humidity"]];
+    if (!_humidity) {
+        _humidity = [NSString stringWithFormat:@"%@ %%", self.main[@"humidity"]];
+    }
     return _humidity;
 }
 
 -(NSString *)windSpeed
 {
-//    if (!_windSpeed) {
-//        NSNumber *windSpd = self.wind[@"speed"];
-//        NSInteger windSpeed = windSpd.longValue;
-//        _windSpeed = [NSString stringWithFormat:@"%ld meter/sec", windSpeed];
-//    }
-    NSNumber *windSpd = self.wind[@"speed"];
-    NSInteger windSpeed = windSpd.longValue;
-    _windSpeed = [NSString stringWithFormat:@"%ld meter/sec", windSpeed];
+    if (!_windSpeed) {
+        NSNumber *windSpd = self.wind[@"speed"];
+        NSInteger windSpeed = windSpd.longValue;
+        _windSpeed = [NSString stringWithFormat:@"%ld meter/sec", windSpeed];
+    }
     return _windSpeed;
 }
 
 -(NSString *)windDirection
 {
-//    if (!_windDirection) {
-//        NSNumber *windDir = self.wind[@"deg"];
-//        _windDirection = [self getWindDirection:windDir.integerValue];
-//    }
-    NSNumber *windDir = self.wind[@"deg"];
-    _windDirection = [self getWindDirection:windDir.integerValue];
+    if (!_windDirection) {
+        NSNumber *windDir = self.wind[@"deg"];
+        _windDirection = [self getWindDirection:windDir.integerValue];
+    }
     return _windDirection;
 }
 
@@ -144,7 +148,7 @@
         windDirection = @"Northwest";
     } else if (windDegree > 326.25 && windDegree <= 348.75) {
         windDirection = @"North-Northwest";
-    } else if (windDegree > 348.75 && windDegree <= 11.25) {
+    } else {
         windDirection = @"North";
     }
     

@@ -7,13 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WeatherDescription.h"
-#import "WeatherConditions.h"
-#import "Wind.h"
 
 @interface Weather : NSObject
-
-//-(instancetype) initWithProperties;
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSArray *weather;

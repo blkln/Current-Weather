@@ -15,9 +15,6 @@
 		7DEBCFA321A32BA7000568E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DEBCFA121A32BA7000568E0 /* LaunchScreen.storyboard */; };
 		7DEBCFAC21A3622A000568E0 /* CityDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBCFAB21A3622A000568E0 /* CityDetailsViewController.m */; };
 		7DEBCFB221A408F6000568E0 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBCFB121A408F6000568E0 /* Weather.m */; };
-		7DEBCFDC21A51C9B000568E0 /* WeatherDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBCFDB21A51C9B000568E0 /* WeatherDescription.m */; };
-		7DEBCFDF21A51CDC000568E0 /* WeatherConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBCFDE21A51CDC000568E0 /* WeatherConditions.m */; };
-		7DEBCFE221A51D13000568E0 /* Wind.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBCFE121A51D13000568E0 /* Wind.m */; };
 		92D257C31802E70D1A76B9FC /* libPods-Current Weather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C98FFA08357416B5AB0800C0 /* libPods-Current Weather.a */; };
 /* End PBXBuildFile section */
 
@@ -37,12 +34,6 @@
 		7DEBCFAB21A3622A000568E0 /* CityDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDetailsViewController.m; sourceTree = "<group>"; };
 		7DEBCFB021A408F6000568E0 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Weather.h; path = Model/Weather.h; sourceTree = "<group>"; };
 		7DEBCFB121A408F6000568E0 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Weather.m; path = Model/Weather.m; sourceTree = "<group>"; };
-		7DEBCFDA21A51C9B000568E0 /* WeatherDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherDescription.h; path = Model/WeatherDescription.h; sourceTree = "<group>"; };
-		7DEBCFDB21A51C9B000568E0 /* WeatherDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherDescription.m; path = Model/WeatherDescription.m; sourceTree = "<group>"; };
-		7DEBCFDD21A51CDC000568E0 /* WeatherConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherConditions.h; path = Model/WeatherConditions.h; sourceTree = "<group>"; };
-		7DEBCFDE21A51CDC000568E0 /* WeatherConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherConditions.m; path = Model/WeatherConditions.m; sourceTree = "<group>"; };
-		7DEBCFE021A51D13000568E0 /* Wind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wind.h; path = Model/Wind.h; sourceTree = "<group>"; };
-		7DEBCFE121A51D13000568E0 /* Wind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Wind.m; path = Model/Wind.m; sourceTree = "<group>"; };
 		C98FFA08357416B5AB0800C0 /* libPods-Current Weather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Current Weather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDC1BA7224C830164C353F3 /* Pods-Current Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Current Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Current Weather/Pods-Current Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,12 +108,6 @@
 			children = (
 				7DEBCFB021A408F6000568E0 /* Weather.h */,
 				7DEBCFB121A408F6000568E0 /* Weather.m */,
-				7DEBCFDA21A51C9B000568E0 /* WeatherDescription.h */,
-				7DEBCFDB21A51C9B000568E0 /* WeatherDescription.m */,
-				7DEBCFDD21A51CDC000568E0 /* WeatherConditions.h */,
-				7DEBCFDE21A51CDC000568E0 /* WeatherConditions.m */,
-				7DEBCFE021A51D13000568E0 /* Wind.h */,
-				7DEBCFE121A51D13000568E0 /* Wind.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -233,11 +218,8 @@
 				7DEBCF9B21A32BA7000568E0 /* CitiesListViewController.m in Sources */,
 				7DEBCF9821A32BA7000568E0 /* AppDelegate.m in Sources */,
 				7DEBCF9521A32BA7000568E0 /* main.m in Sources */,
-				7DEBCFE221A51D13000568E0 /* Wind.m in Sources */,
-				7DEBCFDC21A51C9B000568E0 /* WeatherDescription.m in Sources */,
 				7DEBCFAC21A3622A000568E0 /* CityDetailsViewController.m in Sources */,
 				7DEBCFB221A408F6000568E0 /* Weather.m in Sources */,
-				7DEBCFDF21A51CDC000568E0 /* WeatherConditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
